@@ -1,5 +1,4 @@
-name: Windows Only
-
+name: Windows opendhift
 on: workflow_dispatch
 
 jobs:
