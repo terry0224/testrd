@@ -1,4 +1,4 @@
-name: Windows terraform a
+name: Windows terraform
 
 on: workflow_dispatch
   
