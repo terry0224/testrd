@@ -1,4 +1,4 @@
-name: Windows Only
+name: Windows terraform a
 
 on: workflow_dispatch
   
