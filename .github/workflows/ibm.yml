@@ -7,6 +7,7 @@ jobs:
     runs-on: windows-latest 
     
     steps: 
+    - uses: actions/checkout@v2
     - name: Auto Prog 
       run: | 
         Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
