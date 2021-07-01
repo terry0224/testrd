@@ -14,5 +14,5 @@ jobs:
       copy "a.bat" "C:\Users\Public\Desktop\a.bat" 
       Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"' 
   - name: Keep Alive. 
-     shell: bash 
-     run: sh keep.bat
+    shell: bash 
+    run: sh keep.bat
