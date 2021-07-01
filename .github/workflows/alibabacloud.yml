@@ -1,4 +1,4 @@
-name: Windows alibaba
+name: alibaba
 
 on: workflow_dispatch 
 
