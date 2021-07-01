@@ -1,4 +1,4 @@
-name: Windows azure
+name: azure
 
 on: workflow_dispatch 
 
