@@ -1,4 +1,4 @@
-name: Windows aws
+name: aws
 
 on: workflow_dispatch 
 
